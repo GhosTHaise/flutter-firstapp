@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:initialiasation_1/pages/home/widgets/header.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -33,7 +34,7 @@ class HomePage extends StatelessWidget {
             ),
             Column(
               children: [
-
+                  HeaderSection()
               ],
             )
           ],
@@ -63,7 +64,7 @@ class HomePage extends StatelessWidget {
           child: BottomNavigationBar(
             selectedItemColor: const Color(0xFF5F67EA),
             selectedFontSize: 12,
-            unselectedFontSize: 12,
+            unselectedFontSize: 10,
             unselectedItemColor: Colors.grey.withOpacity(0.7),
             type: BottomNavigationBarType.fixed,
             items: [
