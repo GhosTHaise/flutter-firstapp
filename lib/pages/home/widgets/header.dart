@@ -12,8 +12,10 @@ class HeaderSection extends StatelessWidget {
         right: 25
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
                 Text(
                   "Welcome",
@@ -22,11 +24,25 @@ class HeaderSection extends StatelessWidget {
                     color: Colors.white,
                     fontWeight: FontWeight.bold
                   ),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  "What whould you like to play ?",
+                  style: TextStyle(
+                      fontSize: 19,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w300
+                  ),
                 )
             ],
           ),
           CircleAvatar(
-            child: Image.asset("assets/images/avatar.png"),
+            child: Image.asset(
+                "assets/images/avatar.png",
+                fit: BoxFit.cover,
+            ),
           )
         ],
       ),
