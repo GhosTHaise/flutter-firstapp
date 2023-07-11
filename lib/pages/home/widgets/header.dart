@@ -7,7 +7,7 @@ class HeaderSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Container(
       padding: EdgeInsets.only(
-        top: MediaQuery.of(context).padding.top + 10,
+        top: MediaQuery.of(context).padding.top + 60,
         left: 25,
         right: 25
       ),
