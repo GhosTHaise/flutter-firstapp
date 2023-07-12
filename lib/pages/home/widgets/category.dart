@@ -1,8 +1,29 @@
 import "package:flutter/material.dart";
 
 class CategorySection extends StatelessWidget {
-  const CategorySection({Key? key}) : super(key: key);
-
+  const CategorySection({super.key});
+  final categories = const [
+    {
+      'icon': Icons.track_changes_outlined,
+      'color': const Color(0xFF605CF4),
+      'title': 'Arcabe'
+    },
+    {
+      'icon': Icons.sports_motorsports_outlined,
+      'color': const Color(0xFFFC77A6),
+      'title': 'Racing'
+    },
+    {
+      'icon': Icons.casino_outlined,
+      'color': const Color(0xFF4391FF),
+      'title': 'Strategy'
+    },
+    {
+      'icon': Icons.sports_esports,
+      'color': const Color(0xFF7182f2),
+      'title': 'More'
+    },
+  ];
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,6 +34,24 @@ class CategorySection extends StatelessWidget {
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20)
         )
+      ),
+      child: Column(
+        children: [
+          Container(
+            height: 140,
+            color: Colors.blue,
+            child: ListView.separated(
+              scrollDirection: Axis.horizontal,
+                itemBuilder: (context,index)=>Column(
+                  children: [
+                    Icon(categories[index]['icon'] as IconData)
+                  ],
+                ),
+                separatorBuilder: (context,index) => SizedBox(width: 33) ,
+                itemCount: categories.length
+                ),
+          )
+        ],
       ),
     );
   }
