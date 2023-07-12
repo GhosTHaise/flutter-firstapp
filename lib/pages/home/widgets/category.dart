@@ -39,15 +39,37 @@ class CategorySection extends StatelessWidget {
         children: [
           Container(
             height: 140,
-            color: Colors.blue,
+            //color: Colors.blue,
             child: ListView.separated(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
               scrollDirection: Axis.horizontal,
                 itemBuilder: (context,index)=>Column(
                   children: [
-                    Icon(categories[index]['icon'] as IconData)
+                    const SizedBox(height: 25),
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: categories[index]['color'] as Color
+                      ),
+                      child: Icon(
+                          categories[index]['icon'] as IconData,
+                          color: Colors.white,
+                          size: 40,
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    Text(
+                      categories[index]['title'] as String,
+                      style: TextStyle(
+                        color: Colors.black.withOpacity(0.7),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16
+                      ),
+                    )
                   ],
                 ),
-                separatorBuilder: (context,index) => SizedBox(width: 33) ,
+                separatorBuilder: (context,index) => const SizedBox(width: 33) ,
                 itemCount: categories.length
                 ),
           )
