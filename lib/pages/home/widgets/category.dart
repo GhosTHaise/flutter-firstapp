@@ -36,8 +36,9 @@ class CategorySection extends StatelessWidget {
         )
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
+          SizedBox(
             height: 140,
             //color: Colors.blue,
             child: ListView.separated(
@@ -72,6 +73,16 @@ class CategorySection extends StatelessWidget {
                 separatorBuilder: (context,index) => const SizedBox(width: 33) ,
                 itemCount: categories.length
                 ),
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: const Text(
+              "Popular Game",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20
+              ),
+            ),
           )
         ],
       ),
