@@ -23,7 +23,37 @@ class NewestGame extends StatelessWidget {
               ),
               const SizedBox(width: 10),
               Expanded(
-                  child: Text(game.name)
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start ,
+                    children: [
+                      Text(
+                          game.name,
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w300
+                          ),
+                      ),
+                      const SizedBox(height: 5),
+                      Row(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                              vertical: 5,
+                              horizontal: 15
+                            ),
+                            decoration: BoxDecoration(
+                              color : const Color(0xFF5F67EA),
+                              borderRadius: BorderRadius.circular(15)
+                            ),
+                            child : const Text(
+                                "Install",
+                                
+                            )
+                          )
+                        ],
+                      )
+                    ],
+                  )
               )
             ],
           ),
