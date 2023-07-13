@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:initialiasation_1/pages/home/widgets/popular.dart";
 
 class CategorySection extends StatelessWidget {
   const CategorySection({super.key});
@@ -83,7 +84,8 @@ class CategorySection extends StatelessWidget {
                   fontSize: 20
               ),
             ),
-          )
+          ),
+          PopularGame()
         ],
       ),
     );
