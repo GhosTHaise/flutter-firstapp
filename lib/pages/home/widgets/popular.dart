@@ -20,9 +20,9 @@ class PopularGame extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15)
               ),
               child: Container(
-                padding: EdgeInsets.all(5),
-                child: ClipRect(
-                    borderRadius : ,
+                padding: const EdgeInsets.all(5),
+                child: ClipRRect(
+                    borderRadius : BorderRadius.circular(15),
                     child: Image.asset(games[index].bgImage),
                 ),
               )),
