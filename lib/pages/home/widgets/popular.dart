@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:initialiasation_1/models/game.dart";
+import "package:initialiasation_1/pages/detail/detail.dart";
 
 class PopularGame extends StatelessWidget {
   PopularGame({Key? key}) : super(key: key);
@@ -13,7 +14,7 @@ class PopularGame extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 25,vertical: 20),
         scrollDirection: Axis.horizontal,
           itemBuilder:(context,index) => GestureDetector(
-            onTap: () => print("On tap !"),
+            onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => DetailGame(game: games[index]))),
             child: Card(
               elevation: 5,
               shape: RoundedRectangleBorder(
