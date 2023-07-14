@@ -18,10 +18,7 @@ class DetailGame extends StatelessWidget {
               ),
             ),
             SliverToBoxAdapter(
-              child: Container(
-                height: 150,
-                color : Colors.blue
-              ),
+              child: GameInfo(game),
             )
           ]
         )
