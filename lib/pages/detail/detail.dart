@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:initialiasation_1/models/game.dart";
+import "package:initialiasation_1/pages/detail/widgets/detail_sliver.dart";
 
 class DetailGame extends StatelessWidget {
   const DetailGame({required this.game,Key? key}) : super(key: key);
@@ -7,9 +8,18 @@ class DetailGame extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(game.name),
-        ),
+        body : CustomScrollView(
+          slivers : [
+            SliverPersistentHeader(
+              delegate: DetailSliverDelegate(
+                game: game,
+                expandedHeight: 360,
+                roundedContainerHeight: 30
+              ),
+            ),
+            SliverToBoxAdapter()
+          ]
+        )
     );
   }
 }
