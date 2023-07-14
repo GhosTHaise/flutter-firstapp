@@ -17,7 +17,12 @@ class DetailGame extends StatelessWidget {
                 roundedContainerHeight: 30
               ),
             ),
-            SliverToBoxAdapter()
+            SliverToBoxAdapter(
+              child: Container(
+                height: 150,
+                color : Colors.blue
+              ),
+            )
           ]
         )
     );

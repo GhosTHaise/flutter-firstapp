@@ -28,7 +28,7 @@ class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
             onTap: () => Navigator.of(context).pop(),
             child: Container(
               margin: EdgeInsets.only(
-                top: MediaQuery.of(context).padding.top,
+                top: MediaQuery.of(context).padding.top + 25,
                 left: 25,
                 right: 25,
               ),
